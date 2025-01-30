@@ -13,7 +13,9 @@ interface Dao {
     suspend fun save(entidad: Entity)
 
     @Query(
-        """SELECT * FROM Entidad WHERE entityId == :id limit 1"""
+        """
+            SELECT *
+            FROM Entidad WHERE entityId == :id limit 1"""
     )
     suspend fun find(id: Int): Entity?
 

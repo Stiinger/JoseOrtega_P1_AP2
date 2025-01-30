@@ -12,6 +12,6 @@ import edu.ucne.joseortega_p1_ap2.data.local.dao.Dao
     version = 1,
     exportSchema = false
 )
-abstract class JoseOrtega_P1_AP2Db : RoomDatabase() {
+abstract class JoseOrtegaP1Db : RoomDatabase() {
     abstract fun dao(): Dao
 }
