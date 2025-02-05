@@ -1,17 +1,17 @@
 package edu.ucne.joseortega_p1_ap2.data.local.database
 
 import androidx.room.Database
-import androidx.room.Entity
 import androidx.room.RoomDatabase
-import edu.ucne.joseortega_p1_ap2.data.local.dao.Dao
+import edu.ucne.joseortega_p1_ap2.data.local.dao.SistemaDao
+import edu.ucne.joseortega_p1_ap2.data.local.entity.Sistema
 
 @Database(
     entities = [
-        Entity::class,
+        Sistema::class,
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class JoseOrtegaP1Db : RoomDatabase() {
-    abstract fun dao(): Dao
+    abstract fun sistemaDao(): SistemaDao
 }
