@@ -7,7 +7,6 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import edu.ucne.joseortega_p1_ap2.data.local.dao.Dao
 import edu.ucne.joseortega_p1_ap2.data.local.database.JoseOrtegaP1Db
 import javax.inject.Singleton
 
@@ -27,4 +26,6 @@ object AppModule {
             "JoseOrtegaP1Db.db"
         ).fallbackToDestructiveMigration()
             .build()
+    @Provides
+    fun provideSistemaDao(joseOrtegaP1Db: JoseOrtegaP1Db) = joseOrtegaP1Db.sistemaDao()
 }
